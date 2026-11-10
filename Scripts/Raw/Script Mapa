@@ -1,0 +1,27 @@
+import pandas as pd
+
+# 1. Cargar tu archivo principal (la base de datos con la muestra y coordenadas)
+archivo_cafes = "Base_de_datos_para_llenar_ final(Muestra_Cafes).csv"
+df_cafes = pd.read_csv(archivo_cafes, encoding="latin-1", sep=";")
+
+# 2. Seleccionar estrictamente los datos "raw" (en bruto) y las coordenadas geográficas
+# Esto extrae el ID, el nombre, el id_mapa y la coordenada exacta de cada café
+df_raw_coordenadas = df_cafes[
+    [
+        "cafe_id",
+        "id_mapa",
+        "nombre_cafe",
+        "coordenada",
+        "direccion",
+        "zona_muestreo",
+    ]
+].dropna(subset=["cafe_id"])
+
+print("--- DATOS 'RAW' UNIDOS A LAS COORDENADAS GEOGRÁFICAS ---")
+print(df_raw_coordenadas.to_string(index=False))
+
+# 3. Guardar el resultado unificado en un nuevo archivo CSV para la entrega
+df_raw_coordenadas.to_csv("datos_raw_con_coordenadas.csv", index=False)
+print(
+  "\n¡Listo! El archivo unificado se guardó como 'datos_raw_con_coordenadas.csv'"
+)
