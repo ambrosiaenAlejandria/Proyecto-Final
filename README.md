@@ -25,9 +25,9 @@ El repositorio está organizado en carpetas que reúnen los diferentes component
 - **`Documentación/`**: documentos relacionados con el desarrollo y la fundamentación de la investigación.
 - **`Evidencia_campo/`**: evidencias recopiladas durante el trabajo de campo.
 - **`Instrumentos/`**: instrumentos utilizados para la recolección de información.
-- **`Output/`**: resultados y productos derivados del análisis de los datos.
-- **`Scripts/`**: archivos de código utilizados para procesar, analizar y organizar la información.
+- **`Scripts/`**: archivos de código utilizados para procesar, analizar y organizar la información. Aqui puede encontrar el codigo de python para replicar.
 - **`data/`**: datos empleados en el desarrollo de la investigación.
+- **`figuras/`**: graficas que genera el codigo
 - **`README.md`**: presentación general del proyecto y descripción de la organización del repositorio.
 
 Esta estructura permite organizar los materiales de manera sistemática y facilitar el seguimiento de las distintas etapas de la investigación.
